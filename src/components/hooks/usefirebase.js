@@ -100,6 +100,7 @@ const useFirebase = () => {
         setIsLoading(true);
         signInWithEmailAndPassword(auth, email, password)
             .then(() => {
+
                 swal("Good job!", "Login Successful", "success");
                 axios.post('https://registertest.free.beeceptor.com/init', {
                     email: email,
